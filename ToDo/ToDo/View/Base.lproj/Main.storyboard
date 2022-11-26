@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="height" constant="50" id="1p7-ud-wdo"/>
                                     <constraint firstAttribute="width" constant="50" id="e1g-NU-Ny9"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.84449500639999997" green="0.54613626289999995" blue="0.38463563270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" backgroundImage="plus.circle.fill" catalog="system">
                                     <color key="titleShadowColor" systemColor="systemGrayColor"/>
                                 </state>
@@ -94,9 +94,6 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="back"/>
-                                        <connections>
-                                            <action selector="goBack:" destination="zYg-Wh-Tdt" eventType="touchUpInside" id="1HU-vC-EWn"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Todo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-I8-Tnw">
                                         <rect key="frame" x="134.66666666666666" y="6.9999999999999982" width="121" height="26.333333333333329"/>
@@ -111,9 +108,6 @@
                                         <state key="normal" title="Delete">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
-                                        <connections>
-                                            <action selector="deleteBtnTapped:" destination="zYg-Wh-Tdt" eventType="touchUpInside" id="o6e-4e-vFA"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -126,9 +120,14 @@
                                     <constraint firstAttribute="trailing" secondItem="FL2-gz-27I" secondAttribute="trailing" constant="20" id="XGH-LZ-qsX"/>
                                     <constraint firstItem="DrM-w2-eKP" firstAttribute="centerY" secondItem="kYc-K9-K3o" secondAttribute="centerY" id="z77-48-hL8"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="FL2-gz-27I"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="C8N-Ik-dCw">
-                                <rect key="frame" x="20" y="112" width="350" height="600"/>
+                                <rect key="frame" x="20" y="112" width="350" height="530"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXP-gA-RcH">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="80"/>
@@ -136,7 +135,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aPx-Vt-b88">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="80"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9c-o9-iMF">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9c-o9-iMF">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -144,6 +143,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpY-es-w0M">
                                                         <rect key="frame" x="0.0" y="30.333333333333339" width="350" height="49.666666666666657"/>
+                                                        <color key="backgroundColor" red="0.34901961679999999" green="0.67058825489999996" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -173,6 +173,7 @@
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="New-nT-GUx">
                                                         <rect key="frame" x="0.0" y="30.333333333333343" width="350" height="169.66666666666666"/>
+                                                        <color key="backgroundColor" red="0.34901961679999999" green="0.67058825489999996" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -207,7 +208,7 @@
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jaR-Om-yos">
                                                                 <rect key="frame" x="301" y="0.0" width="51" height="40"/>
                                                                 <connections>
-                                                                    <action selector="hasDueDateSwitchTapped:" destination="zYg-Wh-Tdt" eventType="valueChanged" id="lMJ-rf-UtA"/>
+                                                                    <action selector="switchTapped:" destination="zYg-Wh-Tdt" eventType="valueChanged" id="Eai-27-fOl"/>
                                                                 </connections>
                                                             </switch>
                                                         </subviews>
@@ -233,44 +234,9 @@
                                             </datePicker>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ASm-OX-rym">
-                                        <rect key="frame" x="0.0" y="480" width="350" height="40"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWz-Iq-rBR">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="40"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="126" translatesAutoresizingMaskIntoConstraints="NO" id="jmO-8v-dGl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="40"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Completed?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-ta-SqJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="40"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nt1-Z1-TBd">
-                                                                <rect key="frame" x="301" y="0.0" width="51" height="40"/>
-                                                                <connections>
-                                                                    <action selector="isCompletedSwichTapped:" destination="zYg-Wh-Tdt" eventType="valueChanged" id="DTj-x6-C4r"/>
-                                                                </connections>
-                                                            </switch>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="jmO-8v-dGl" firstAttribute="leading" secondItem="hWz-Iq-rBR" secondAttribute="leading" id="H8P-le-ujH"/>
-                                                    <constraint firstAttribute="bottom" secondItem="jmO-8v-dGl" secondAttribute="bottom" id="Nwc-cf-s0t"/>
-                                                    <constraint firstAttribute="height" constant="40" id="SJk-wA-aIX"/>
-                                                    <constraint firstItem="jmO-8v-dGl" firstAttribute="top" secondItem="hWz-Iq-rBR" secondAttribute="top" id="XcF-4y-Jna"/>
-                                                    <constraint firstAttribute="trailing" secondItem="jmO-8v-dGl" secondAttribute="trailing" id="qKd-Ff-AfC"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-PE-0eW">
-                                        <rect key="frame" x="0.0" y="550" width="350" height="50"/>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <rect key="frame" x="0.0" y="480" width="350" height="50"/>
+                                        <color key="backgroundColor" red="0.84449500639999997" green="0.54613626289999995" blue="0.38463563270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Yu3-Na-c9I"/>
                                         </constraints>
@@ -284,7 +250,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="createToDoTapped:" destination="zYg-Wh-Tdt" eventType="touchUpInside" id="8Kh-Zs-7X7"/>
+                                            <action selector="saveBtnTapped:" destination="zYg-Wh-Tdt" eventType="touchUpInside" id="xZ7-Ua-prB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -303,13 +269,7 @@
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="IwU-SC-vqw" id="I44-Gz-5rS"/>
-                        <outlet property="deleteBtn" destination="FL2-gz-27I" id="mfG-Gw-bSG"/>
-                        <outlet property="hasDueDateSwitch" destination="jaR-Om-yos" id="pgl-2Q-VkO"/>
-                        <outlet property="isCompletedSwitch" destination="Nt1-Z1-TBd" id="H1Y-3h-mVo"/>
-                        <outlet property="nameTextField" destination="ZpY-es-w0M" id="EdN-Yx-S5x"/>
                         <outlet property="notesTextView" destination="New-nT-GUx" id="rPz-MP-cd7"/>
-                        <outlet property="saveToDoBtn" destination="Lf8-PE-0eW" id="ayA-2p-7c7"/>
-                        <outlet property="titleLabel" destination="B1w-I8-Tnw" id="gBa-7E-2iF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75U-d6-cDd" sceneMemberID="firstResponder"/>
