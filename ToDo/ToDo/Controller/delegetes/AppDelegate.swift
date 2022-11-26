@@ -1,11 +1,18 @@
 //
 //  AppDelegate.swift
 //  ToDo
+
+//  Created by Brendan Rodrigues on 2022-11-19.
+//  Authors:Brendan Rodrigues 301119016, Vatsalkumar Patel 300874931
+//  Todo app v 1.5
+//  Database intialized using realm swift
 //
-//  Created by Hamza Butt on 11/21/22.
+//  24/11/2022
 //
 
 import UIKit
+import RealmSwift
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let url = Realm.Configuration.defaultConfiguration.fileURL {
+            print("url = \(url)")
+        }
+        
         return true
     }
 

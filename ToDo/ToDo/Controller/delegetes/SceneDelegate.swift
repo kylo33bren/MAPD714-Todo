@@ -2,7 +2,11 @@
 //  SceneDelegate.swift
 //  ToDo
 //
-//  Created by Hamza Butt on 11/21/22.
+//  Created by Brendan Rodrigues on 2022-11-19.
+//  Authors:Brendan Rodrigues 301119016, Vatsalkumar Patel 300874931
+//  Todo app v 1.5
+//
+//  24/11/2022
 //
 
 import UIKit
